@@ -142,6 +142,17 @@ let page = await fs.readFile('page.html', 'utf8');
 page = page.replace(/\{\{DIVIDER_([ABCD])\}\}/g, (_, k) => DIVIDERS[k]);
 page = page.replace(/\{\{IMG:([a-z-]+)\|([^|]*)\|([^|}]*?)(\|eager|\|low)?\}\}/g,
   (_, name, alt, sizes, flag) => img(name, alt, sizes, { load: flag ? flag.slice(1) : 'lazy' }));
+// The LCP preload and the social card, generated from the manifest so they can
+// never advertise a tier the image pipeline has stopped producing. Both used to
+// be hardcoded, and both went stale when the width ladder changed.
+const widest = (name) => `i/${name}-${manifest[name].sizes[manifest[name].sizes.length - 1]}.webp`;
+
+page = page.replace(/\{\{PRELOAD:([a-z-]+)\|([^}]*)\}\}/g, (_, name, sizes) => {
+  const srcset = manifest[name].sizes.map(w => `i/${name}-${w}.webp ${w}w`).join(', ');
+  return `<link rel="preload" as="image" href="${widest(name)}"`
+    + ` imagesrcset="${srcset}" imagesizes="${sizes}" fetchpriority="high">`;
+});
+page = page.replace(/\{\{WIDEST:([a-z-]+)\}\}/g, (_, name) => widest(name));
 page = page.replace(/\{\{LQIP:([a-z-]+)\}\}/g, (_, name) => manifest[name].lqip);
 
 await fs.mkdir('site', { recursive: true });
