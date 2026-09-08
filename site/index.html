@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ashley Landscaping | Regrades, sleeper walls and patios in Lymington</title>
-<meta name="description" content="Hard landscaping across Lymington and the New Forest. Garden regrades, sleeper retaining walls, patios, driveways, fencing and slatted gates. 5.0 from 22 Google reviews.">
+<title>Ashley Landscaping | Landscaper in Lymington, New Forest</title>
+<meta name="description" content="Landscaping and groundworks across Lymington and the New Forest. Levelling sloped gardens, sleeper retaining walls, patios, driveways, fencing and gates. 5.0 from 22 Google reviews.">
 <meta name="theme-color" content="#1B2A21">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ashley Landscaping | Lymington, New Forest">
-<meta property="og:description" content="Garden regrades, sleeper retaining walls, patios and driveways. Twenty years in the New Forest.">
+<meta property="og:description" content="Levelling sloped gardens, sleeper walls, patios and driveways. Twenty years in the New Forest.">
 <meta property="og:image" content="i/hero-1000.webp">
 <meta property="og:locale" content="en_GB">
 
@@ -31,6 +31,7 @@
   --gut:clamp(1.25rem,5vw,4.5rem);
   --stack:clamp(4.5rem,9vw,9rem);
   --maxw:1360px;
+  --edge:max(var(--gut), calc((100vw - var(--maxw)) / 2 + var(--gut)));
   --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
   --fs-body:clamp(1.0625rem,.98rem + .35vw,1.1875rem);
   --fs-lead:clamp(1.1875rem,1.05rem + .7vw,1.5rem);
@@ -39,6 +40,9 @@
   --p:0;
 }
 *,*::before,*::after{box-sizing:border-box}
+@supports not (height:100svh){
+  .hero{min-height:100vh}.stage,.datum-pin{height:100vh}.panel{grid-template-rows:56vh 1fr}
+}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--chalk);color:var(--ink);overflow-x:hidden;
   font-family:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -60,6 +64,10 @@ a{color:inherit}
 .head{max-width:62ch}
 .head::before{content:"";display:block;width:52px;height:2px;background:var(--brass);margin-bottom:1.25rem;transform-origin:left}
 .head h2{margin-bottom:.85rem}
+.sourced{max-width:46ch;border-left:2px solid var(--brass);padding-left:1.1rem;margin-top:1.5rem}
+.sourced span{display:block;font-family:var(--serif);font-style:italic;color:var(--ink);
+  font-size:clamp(1.0625rem,1rem + .35vw,1.25rem);line-height:1.4}
+.sourced b{display:block;margin-top:.55rem;font-size:.8125rem;font-weight:600;letter-spacing:.02em;color:var(--stone)}
 .band--ink .head .lead{color:rgba(243,239,230,.74)}
 .band{padding-block:var(--stack)}
 .band--ink{background:var(--ink);color:var(--chalk)}
@@ -103,7 +111,7 @@ a{color:inherit}
 @media (min-width:900px){.hdr{height:80px}.nav{display:flex}.hdr-cta{margin-left:0}.hdr-rating{display:block}}
 
 /* ================================================================ hero */
-.hero{position:relative;min-height:100dvh;display:grid;align-items:end;overflow:hidden;background:var(--ink-2)}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:var(--ink-2)}
 .hero-img{position:absolute;inset:0;z-index:0}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:44% 74%}
 @media (min-width:760px){.hero-img img{object-position:50% 64%}}
@@ -136,6 +144,12 @@ a{color:inherit}
 .divider--onphoto .dl-3{color:#7F9878} .divider--onphoto .dl-4{color:#B3C1A4}
 .divider--onphoto .dl-5{color:var(--chalk)}
 .divider--to-ink{background:var(--chalk)} .divider--to-ink .dl-5{color:var(--ink)}
+/* between two dark sections: a green ridge silhouetted in the dark, rather
+   than a pale band where no colour change is happening */
+.divider--in-ink{background:var(--ink)}
+.divider--in-ink .dl-1{color:#22352A} .divider--in-ink .dl-2{color:#2D4335}
+.divider--in-ink .dl-3{color:#3C5642} .divider--in-ink .dl-4{color:#4E6A50}
+.divider--in-ink .dl-5{color:var(--ink)}
 .divider--to-chalk{background:var(--ink)}
 .divider--to-chalk .dl-1{color:#2A3F31} .divider--to-chalk .dl-2{color:#3B5641}
 .divider--to-chalk .dl-3{color:#567355} .divider--to-chalk .dl-4{color:#869E7C}
@@ -154,12 +168,12 @@ a{color:inherit}
    where scroll-driven CSS animations are supported. */
 .regrade{background:var(--chalk);padding-top:var(--stack)}
 .track{position:relative;height:400vh}
-.stage{position:sticky;top:0;height:100dvh;overflow:hidden;display:flex;flex-direction:column}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column}
 /* percentages on translate resolve against the strip's own width, and the
    strip is six panels wide, so travelling five panels is 5/6 of itself */
 .strip{flex:1;display:flex;width:600%;min-height:0;
   transform:translate3d(calc(var(--p) * -83.3333%),0,0);will-change:transform}
-.panel{width:16.6667%;flex:none;display:grid;grid-template-rows:56dvh 1fr}
+.panel{width:16.6667%;flex:none;display:grid;grid-template-rows:56svh 1fr}
 .panel-pic{position:relative;overflow:hidden;background:var(--ink-2)}
 .panel-pic img{width:100%;height:100%;object-fit:cover}
 .panel-copy{padding:1.5rem var(--gut) 3rem;display:grid;align-content:start;gap:.4rem}
@@ -190,7 +204,7 @@ a{color:inherit}
 /* the section drawing: one line that unfolds from the fall into the levels */
 .datum{background:var(--chalk-2)}
 .datum-track{position:relative;height:230vh}
-.datum-pin{position:sticky;top:0;height:100dvh;display:grid;align-content:center;overflow:hidden}
+.datum-pin{position:sticky;top:0;height:100svh;display:grid;align-content:center;overflow:hidden}
 .datum-in{max-width:min(100%,940px);margin:0 auto}
 .datum svg{width:100%;height:auto;display:block}
 .datum-head{margin-bottom:clamp(1.6rem,4vh,2.8rem)}
@@ -221,7 +235,10 @@ a{color:inherit}
 @media (min-width:900px){.arrows{display:flex}}
 .cards{display:flex;gap:clamp(.9rem,1.8vw,1.4rem);margin-top:clamp(2rem,4vw,3rem);
   overflow-x:auto;scroll-snap-type:x mandatory;
-  padding-inline:var(--gut);padding-bottom:1.2rem;scrollbar-width:none}
+  padding-inline:var(--edge);padding-bottom:1.2rem;scrollbar-width:none;
+  /* without this the snap pulls the first card flush to the window edge and
+     eats the gutter it was given */
+  scroll-padding-inline:var(--edge)}
 .cards::-webkit-scrollbar{display:none}
 .card{flex:0 0 min(78vw,340px);scroll-snap-align:start}
 .card .pic{aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:var(--chalk-2)}
@@ -319,7 +336,7 @@ a{color:inherit}
   <div class="wrap">
     <a class="mark" href="#top">Ashley Landscaping<span>Lymington &middot; New Forest</span></a>
     <nav class="nav" aria-label="Sections">
-      <a href="#regrade">The regrade</a><a href="#services">What he builds</a><a href="#reviews">Reviews</a>
+      <a href="#regrade">Before &amp; after</a><a href="#services">What he builds</a><a href="#reviews">Reviews</a>
     </nav>
     <div class="hdr-cta">
       <span class="hdr-rating"><b>5.0</b> &middot; 22 Google reviews</span>
@@ -338,7 +355,7 @@ a{color:inherit}
   <div class="hero-img"><img src="i/hero-1000.webp" srcset="i/hero-400.webp 400w, i/hero-700.webp 700w, i/hero-1000.webp 1000w" sizes="100vw" width="1184" height="880" alt="A terraced back garden with two levels of new oak sleeper retaining wall, sandstone-capped steps and freshly laid lawn under a clear blue sky." style="background-image:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoUAA8APxFwsFAsJiSisAgBgCIJYgCdABbiVsbABdWUO5pAANNVnA1b2t1sEgz4fmr/ttRtfuJqo92eN9CrJ0zD3hlqdukfdwAAAA==);background-size:cover" fetchpriority="high" decoding="async"></div>
   <div class="wrap">
     <h1>Difficult gardens, levelled and rebuilt.</h1>
-    <p>Regrades, sleeper walls, patios and driveways. Lymington and the New Forest, twenty years.</p>
+    <p>Levelling, sleeper walls, patios, driveways and fencing. Lymington and the New Forest, twenty years.</p>
     <a class="btn btn-chalk" href="tel:+447546335805">Call 07546 335805</a>
   </div>
   <div class="divider divider--onphoto" aria-hidden="true">
@@ -349,34 +366,35 @@ a{color:inherit}
 
 <!-- ============================================================ the regrade -->
 <section class="regrade" id="regrade">
-  <div class="wrap"><div class="head rv"><p class="label">A garden in Lymington</p><h2>Ten feet of fall, taken out.</h2></div></div>
+  <div class="wrap"><div class="head rv"><p class="label">A garden in Lymington</p><h2>It dropped ten feet. Now it&rsquo;s two flat lawns.</h2>
+      <p class="sourced"><span>&ldquo;Re-leveling the whole garden with an original gradient of 10ft.&rdquo;</span><b>The customer, in a five star Google review</b></p></div></div>
 
   <div class="track" data-scrub="track">
     <div class="stage">
       <div class="strip">
         <article class="panel">
           <div class="panel-pic"><span class="tag tag-b">Before</span><img src="i/b-slope-1300.webp" srcset="i/b-slope-400.webp 400w, i/b-slope-700.webp 700w, i/b-slope-1000.webp 1000w, i/b-slope-1300.webp 1300w" sizes="(min-width:900px) 60vw, 100vw" width="1600" height="1200" alt="Rough uncut grass running down a steep slope, with ladders and timber leaning against a green summerhouse." style="background-image:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAwCdASoUAA8APxF0slCsJqSisAgBgCIJQBdgBDWP5FJjcAAA/ud7KKk09cF9y8DV7vpqsZrDpKufkHu7waZ5lOsN7xmadmmaZyPzwrIAAA==);background-size:cover" fetchpriority="low" decoding="async"></div>
-          <div class="panel-copy"><h3><i>01</i>As he found it</h3><p>Ten feet of drop from the house to the back boundary, and nowhere level enough to put a chair.</p></div>
+          <div class="panel-copy"><h3><i>01</i>As he found it</h3><p>The ground fell about ten feet from the house down to the back fence. Nowhere flat enough to put a chair.</p></div>
         </article>
         <article class="panel">
           <div class="panel-pic"><span class="tag tag-b">Before</span><img src="i/b-house-1300.webp" srcset="i/b-house-400.webp 400w, i/b-house-700.webp 700w, i/b-house-1000.webp 1000w, i/b-house-1300.webp 1300w" sizes="(min-width:900px) 60vw, 100vw" width="1600" height="1200" alt="An old green summerhouse with rotten decking, overgrown grasses and a mossy boundary fence behind." style="background-image:url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAwCdASoUAA8APxF0slCsJqSisAgBgCIJZQAAQGzhB4IRczNgAAD+z+pH5bpxY9FB66D4PEfc73r9tl6ABCfBAJZxCMjgAAA=);background-size:cover" fetchpriority="low" decoding="async"></div>
-          <div class="panel-copy"><h3><i>02</i>The summerhouse</h3><p>Sitting out on the slope on decking gone soft. All of it in the way of the levels.</p></div>
+          <div class="panel-copy"><h3><i>02</i>The old summerhouse</h3><p>Perched halfway down the slope on decking that had gone soft underfoot.</p></div>
         </article>
         <article class="panel">
           <div class="panel-pic"><span class="tag tag-b">Before</span><img src="i/b-clear-1300.webp" srcset="i/b-clear-400.webp 400w, i/b-clear-700.webp 700w, i/b-clear-1000.webp 1000w, i/b-clear-1300.webp 1300w" sizes="(min-width:900px) 60vw, 100vw" width="1600" height="1200" alt="The same garden mid clearance: bare worn ground, a cement mixer and a water butt under the trees." style="background-image:url(data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAwCdASoUAA8APxF0sFCsJqSisAgBgCIJYgAAUrlL9aWzcziCuvsAAP4cmyqVvvfBwQ/vco8nl4vL0l+hZTl9puPqAAAA);background-size:cover" fetchpriority="low" decoding="async"></div>
-          <div class="panel-copy"><h3><i>03</i>Cleared</h3><p>Greenhouse, decking and overgrowth out. Mixer in. The levels set before anything went back.</p></div>
+          <div class="panel-copy"><h3><i>03</i>Stripped back</h3><p>Greenhouse, decking and overgrowth cleared out, down to bare ground, mixer on site.</p></div>
         </article>
         <article class="panel">
           <div class="panel-pic"><span class="tag tag-a">After</span><img src="i/a-shed-1000.webp" srcset="i/a-shed-400.webp 400w, i/a-shed-700.webp 700w, i/a-shed-1000.webp 1000w" sizes="(min-width:900px) 60vw, 100vw" width="1184" height="880" alt="A new timber shed on freshly laid turf, with an oak sleeper retaining wall running the width of the garden." style="background-image:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAwCdASoUAA8APxFysVAsJqSisAgBgCIJaACsABeFKsn7hatsQAD+3M/poePaD8OpH7pl/1S+08XqP1heWnyypgzTQq8s8lQFMcSy4KAAAA==);background-size:cover" fetchpriority="low" decoding="async"></div>
-          <div class="panel-copy"><h3><i>04</i>Levelled and walled</h3><p>Sleeper retaining walls holding each level, and a shed where the greenhouse used to lean.</p></div>
+          <div class="panel-copy"><h3><i>04</i>The walls go in</h3><p>Oak sleeper walls hold the new ground back, and a new shed sits at the top of the garden.</p></div>
         </article>
         <article class="panel">
           <div class="panel-pic"><span class="tag tag-a">After</span><img src="i/a-seat-1000.webp" srcset="i/a-seat-400.webp 400w, i/a-seat-700.webp 700w, i/a-seat-1000.webp 1000w" sizes="(min-width:900px) 60vw, 100vw" width="1184" height="880" alt="A sunken seating bay framed in oak sleepers with two loungers, beside a slatted timber gate and matching fence panels." style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUAA8APxFysFAsJqSisAgBgCIJYgCdMoACTkE13tegkZvUAP6SgZY14m426JHi5QP0b+ldQ+YtnmvB7fPx7j6mOGENpKn4Nh4D2gAA);background-size:cover" fetchpriority="low" decoding="async"></div>
-          <div class="panel-copy"><h3><i>05</i>The seating bay</h3><p>Cut into the lawn and framed in sleepers, with the slatted gate and fence panels along the boundary.</p></div>
+          <div class="panel-copy"><h3><i>05</i>A sunken seating area</h3><p>Cut down into the lawn and framed in sleepers, with a slatted gate and matching fencing along the boundary.</p></div>
         </article>
         <article class="panel">
           <div class="panel-pic"><span class="tag tag-a">After</span><img src="i/a-lawn-1000.webp" srcset="i/a-lawn-400.webp 400w, i/a-lawn-700.webp 700w, i/a-lawn-1000.webp 1000w" sizes="(min-width:900px) 60vw, 100vw" width="1184" height="880" alt="A level lawn edged in corten steel, sleeper retaining walls stepping up to the house, and a sunken seating bay under a mature tree." style="background-image:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAwCdASoUAA8APxFysFAsJqSisAgBgCIJQAAGiKn0DgU/2CAA/r3/CDUa/qg5zRfkPd7F1KwOm6odbrEYD+4byiIJWmswG2Q4APXul4AAAA==);background-size:cover" fetchpriority="low" decoding="async"></div>
-          <div class="panel-copy"><h3><i>06</i>Finished</h3><p>Two level lawns where the fall used to be, sandstone steps between them, corten edging to the borders.</p></div>
+          <div class="panel-copy"><h3><i>06</i>Finished</h3><p>Two flat lawns instead of a slope, sandstone steps between them, and rusted steel edging round the borders.</p></div>
         </article>
       </div>
       <div class="rail" aria-hidden="true">
@@ -387,7 +405,7 @@ a{color:inherit}
 
   <div class="datum"><div class="datum-track" data-scrub="datum"><div class="datum-pin"><div class="wrap"><figure class="datum-in">
     <figcaption class="datum-head">
-      <p class="label">Section through the garden</p>
+      <p class="label">The same garden, side on</p>
       <h3>What the sleeper walls are actually holding up.</h3>
     </figcaption>
     <svg viewBox="0 0 560 280" role="img" aria-label="A section through the garden. The ground fell about ten feet in one continuous slope from the base of the house to the back boundary; it is now two level terraces, each held up by a sleeper retaining wall.">
@@ -401,10 +419,10 @@ a{color:inherit}
         <path d="M534 122 L534 244"></path><path d="M528 130 L534 118 L540 130"></path><path d="M528 236 L534 248 L540 236"></path>
       </g>
       <text x="518" y="190" font-size="19" font-weight="600" fill="#1B2A21" text-anchor="end">10 ft</text>
-      <text id="lbl1" x="182" y="162" font-size="18" font-weight="600" fill="#75592F" transform="rotate(17.3 182 162)">the fall it had</text>
-      <text id="lbl2" x="146" y="110" font-size="18" font-weight="600" fill="#1B2A21" opacity="0">two level lawns</text>
+      <text id="lbl1" x="182" y="162" font-size="18" font-weight="600" fill="#75592F" transform="rotate(17.3 182 162)">how it used to slope</text>
+      <text id="lbl2" x="146" y="110" font-size="18" font-weight="600" fill="#1B2A21" opacity="0">two flat lawns</text>
     </svg>
-    <p class="datum-note">The fall the garden had, folding into what is there now: two level lawns, each held up by a sleeper retaining wall, with sandstone steps between them.</p>
+    <p class="datum-note">The dashed line is how the ground used to run: one straight slope from the house to the back fence. It is now two flat lawns, each held up by a sleeper wall, with sandstone steps between them.</p>
   </figure></div></div></div></div>
 
 </section>
@@ -436,7 +454,7 @@ a{color:inherit}
 <section class="band services" id="services" style="padding-bottom:clamp(3rem,6vw,5rem)">
   <div class="wrap">
     <div class="rail-head rv">
-      <div class="head"><h2>What he builds.</h2><p class="lead">Every line here comes from something a customer described in a review.</p></div>
+      <div class="head"><h2>What he builds.</h2><p class="lead">Most jobs start with getting the ground right. Everything else sits on top of that.</p></div>
       <div class="arrows">
         <button type="button" data-cards="-1" aria-label="Previous services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
         <button type="button" data-cards="1" aria-label="Next services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
@@ -444,7 +462,7 @@ a{color:inherit}
     </div>
   </div>
   <div class="cards" id="cards" tabindex="0" role="group" aria-label="Services">
-    <article class="card"><div class="pic"><img src="i/s-ground-1000.webp" srcset="i/s-ground-400.webp 400w, i/s-ground-700.webp 700w, i/s-ground-1000.webp 1000w" sizes="340px" width="1006" height="810" alt="Ground levelled and framed with new sleepers before paving." style="background-image:url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoUABAAPxFysVAsJqSisAgBgCIJYwC1GoAC4xMSKS4qfwAA9l6+2P386preuoKLwhFD0ZYJaUHEM+FSsBgKGApYngA=);background-size:cover" loading="lazy" decoding="async"></div><h3><i>01</i>Levelling and groundworks</h3><p>Regrading, cutting into banks, turf and topsoil out, hardcore, chippings and edging in.</p></article>
+    <article class="card"><div class="pic"><img src="i/s-ground-1000.webp" srcset="i/s-ground-400.webp 400w, i/s-ground-700.webp 700w, i/s-ground-1000.webp 1000w" sizes="340px" width="1006" height="810" alt="Ground levelled and framed with new sleepers before paving." style="background-image:url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoUABAAPxFysVAsJqSisAgBgCIJYwC1GoAC4xMSKS4qfwAA9l6+2P386preuoKLwhFD0ZYJaUHEM+FSsBgKGApYngA=);background-size:cover" loading="lazy" decoding="async"></div><h3><i>01</i>Levelling and groundworks</h3><p>Levelling slopes, cutting into banks, taking out turf and topsoil, then hardcore, chippings and edging.</p></article>
     <article class="card"><div class="pic"><img src="i/s-patio-1000.webp" srcset="i/s-patio-400.webp 400w, i/s-patio-700.webp 700w, i/s-patio-1000.webp 1000w" sizes="340px" width="1184" height="880" alt="A large Indian sandstone patio running the length of a brick house, edged with brick soldier courses." style="background-image:url(data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAwCdASoUAA8APxF0slCsJqSisAgBgCIJQBfnDW2toZAFeHjKVyAA/viQlaHF5FVvX2co9eTfyhvsnFmOIF1qukqt/NqXCb8IEc5CuAA=);background-size:cover" loading="lazy" decoding="async"></div><h3><i>02</i>Patios and paving</h3><p>Indian sandstone, porcelain, brick and setts. New patios, and recovery on paving that has dropped.</p></article>
     <article class="card"><div class="pic"><img src="i/s-path-1300.webp" srcset="i/s-path-400.webp 400w, i/s-path-700.webp 700w, i/s-path-1000.webp 1000w, i/s-path-1300.webp 1300w" sizes="340px" width="1280" height="1152" alt="A reclaimed brick circle path meeting a sandstone terrace across a sleeper step." style="background-image:url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoUABIAPxF2sFAsJ6SisAgBgCIJZQAAW7bnkQGVvDtwAAD8a+ppamllVumLHf5JheNxrr1z25PdR/SXkO6enpj+BvSDGD025H1cyZBXyzIAAA==);background-size:cover" loading="lazy" decoding="async"></div><h3><i>03</i>Paths and driveways</h3><p>Drives remodelled, entrances widened, and paths laid around existing trees.</p></article>
     <article class="card"><div class="pic"><img src="i/s-sleep-1000.webp" srcset="i/s-sleep-400.webp 400w, i/s-sleep-700.webp 700w, i/s-sleep-1000.webp 1000w" sizes="340px" width="1184" height="704" alt="Two tiers of dark stained sleeper raised beds, newly planted, beside a gravel path." style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUAAwAPxF2sVCsJySisAgBgCIJZACdACK7jthdiAD+gK+bMbij/c0WZvBujJwIgq5nqWji3cURePWxuIpGDTNQwIqAAA==);background-size:cover" loading="lazy" decoding="async"></div><h3><i>04</i>Sleeper walls and raised beds</h3><p>Retaining walls that hold a level, and beds rebuilt in new sleepers where decking planks rotted out.</p></article>
@@ -465,7 +483,7 @@ a{color:inherit}
   </div>
 </section>
 
-<div class="divider divider--to-ink" aria-hidden="true">
+<div class="divider divider--in-ink" aria-hidden="true">
 <svg viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice" focusable="false">
 <g class="dl dl-1"><path d="M0 200L0 25.9C10 25.9 10 23.4 20 23.4C30 23.4 30 21.3 40 21.3C50 21.3 50 19.6 60 19.6C70 19.6 70 18.3 80 18.3C90 18.3 90 17.5 100 17.5C110 17.5 110 17 120 17C130 17 130 17.1 140 17.1C150 17.1 150 17.4 160 17.4C170 17.4 170 18 180 18C190 18 190 17.9 200 17.9C210 17.9 210 16.9 220 16.9C230 16.9 230 15.4 240 15.4C250 15.4 250 14.2 260 14.2C270 14.2 270 14 280 14C290 14 290 14.8 300 14.8C310 14.8 310 16.1 320 16.1C330 16.1 330 17.6 340 17.6C350 17.6 350 18.9 360 18.9C370 18.9 370 19.9 380 19.9C390 19.9 390 20.7 400 20.7C410 20.7 410 21.2 420 21.2C430 21.2 430 21.5 440 21.5C450 21.5 450 21.6 460 21.6C470 21.6 470 21.8 480 21.8C490 21.8 490 21.8 500 21.8C510 21.8 510 22 520 22C530 22 530 22.4 540 22.4C550 22.4 550 23.3 560 23.3C570 23.3 570 24.9 580 24.9C590 24.9 590 27.6 600 27.6C610 27.6 610 30.9 620 30.9C630 30.9 630 34.2 640 34.2C650 34.2 650 36.7 660 36.7C670 36.7 670 38 680 38C690 38 690 38.4 700 38.4C710 38.4 710 38.1 720 38.1C730 38.1 730 37.3 740 37.3C750 37.3 750 36.4 760 36.4C770 36.4 770 35.6 780 35.6C790 35.6 790 35 800 35C810 35 810 34.7 820 34.7C830 34.7 830 34.6 840 34.6C850 34.6 850 33.8 860 33.8C870 33.8 870 30.8 880 30.8C890 30.8 890 25.7 900 25.7C910 25.7 910 19.9 920 19.9C930 19.9 930 15.5 940 15.5C950 15.5 950 14 960 14C970 14 970 15.6 980 15.6C990 15.6 990 18.7 1000 18.7C1010 18.7 1010 21.1 1020 21.1C1030 21.1 1030 22.1 1040 22.1C1050 22.1 1050 22 1060 22C1070 22 1070 21.2 1080 21.2C1090 21.2 1090 20.2 1100 20.2C1110 20.2 1110 19.1 1120 19.1C1130 19.1 1130 18.2 1140 18.2C1150 18.2 1150 17.9 1160 17.9C1170 17.9 1170 18.8 1180 18.8C1190 18.8 1190 21.1 1200 21.1C1210 21.1 1210 24.2 1220 24.2C1230 24.2 1230 26.9 1240 26.9C1250 26.9 1250 28.8 1260 28.8C1270 28.8 1270 30 1280 30C1290 30 1290 31 1300 31C1310 31 1310 32.1 1320 32.1C1330 32.1 1330 33.3 1340 33.3C1350 33.3 1350 34.5 1360 34.5C1370 34.5 1370 35.5 1380 35.5C1390 35.5 1390 36.3 1400 36.3C1410 36.3 1410 36.3 1420 36.3C1430 36.3 1430 35.3 1440 35.3L1440 200Z"/></g><g class="dl dl-2"><path d="M0 200L0 60.8C10 60.8 10 55.8 20 55.8C30 55.8 30 49.4 40 49.4C50 49.4 50 43.5 60 43.5C70 43.5 70 38.6 80 38.6C90 38.6 90 34.2 100 34.2C110 34.2 110 29.6 120 29.6C130 29.6 130 24.5 140 24.5C150 24.5 150 19.5 160 19.5C170 19.5 170 15.7 180 15.7C190 15.7 190 14 200 14C210 14 210 15 220 15C230 15 230 18.5 240 18.5C250 18.5 250 23.7 260 23.7C270 23.7 270 29.7 280 29.7C290 29.7 290 36.1 300 36.1C310 36.1 310 42.9 320 42.9C330 42.9 330 49.7 340 49.7C350 49.7 350 54.9 360 54.9C370 54.9 370 57.4 380 57.4C390 57.4 390 58.1 400 58.1C410 58.1 410 58.4 420 58.4C430 58.4 430 58.4 440 58.4C450 58.4 450 58.3 460 58.3C470 58.3 470 57.8 480 57.8C490 57.8 490 54.6 500 54.6C510 54.6 510 48.1 520 48.1C530 48.1 530 43 540 43C550 43 550 41.1 560 41.1C570 41.1 570 41.1 580 41.1C590 41.1 590 41.9 600 41.9C610 41.9 610 43.1 620 43.1C630 43.1 630 44.3 640 44.3C650 44.3 650 45.7 660 45.7C670 45.7 670 47.2 680 47.2C690 47.2 690 49.1 700 49.1C710 49.1 710 52.6 720 52.6C730 52.6 730 58.9 740 58.9C750 58.9 750 65.9 760 65.9C770 65.9 770 69.2 780 69.2C790 69.2 790 69.5 800 69.5C810 69.5 810 68.9 820 68.9C830 68.9 830 67.8 840 67.8C850 67.8 850 66.1 860 66.1C870 66.1 870 63.5 880 63.5C890 63.5 890 59.4 900 59.4C910 59.4 910 53.5 920 53.5C930 53.5 930 47.6 940 47.6C950 47.6 950 43.2 960 43.2C970 43.2 970 40.7 980 40.7C990 40.7 990 39.1 1000 39.1C1010 39.1 1010 37.3 1020 37.3C1030 37.3 1030 35.6 1040 35.6C1050 35.6 1050 35.1 1060 35.1C1070 35.1 1070 36.2 1080 36.2C1090 36.2 1090 38.4 1100 38.4C1110 38.4 1110 40.8 1120 40.8C1130 40.8 1130 43 1140 43C1150 43 1150 45.1 1160 45.1C1170 45.1 1170 47.5 1180 47.5C1190 47.5 1190 50.5 1200 50.5C1210 50.5 1210 53.6 1220 53.6C1230 53.6 1230 55.1 1240 55.1C1250 55.1 1250 54.6 1260 54.6C1270 54.6 1270 53.3 1280 53.3C1290 53.3 1290 51.9 1300 51.9C1310 51.9 1310 51.1 1320 51.1C1330 51.1 1330 51.4 1340 51.4C1350 51.4 1350 52.4 1360 52.4C1370 52.4 1370 52.8 1380 52.8C1390 52.8 1390 52.3 1400 52.3C1410 52.3 1410 51.8 1420 51.8C1430 51.8 1430 52.2 1440 52.2L1440 200Z"/></g><g class="dl dl-3"><path d="M0 200L0 92.8C10 92.8 10 88.5 20 88.5C30 88.5 30 83.2 40 83.2C50 83.2 50 76.9 60 76.9C70 76.9 70 70 80 70C90 70 90 62.7 100 62.7C110 62.7 110 55.2 120 55.2C130 55.2 130 48.2 140 48.2C150 48.2 150 42.2 160 42.2C170 42.2 170 38.3 180 38.3C190 38.3 190 37.2 200 37.2C210 37.2 210 39.5 220 39.5C230 39.5 230 44.7 240 44.7C250 44.7 250 51.9 260 51.9C270 51.9 270 59.6 280 59.6C290 59.6 290 67 300 67C310 67 310 73.4 320 73.4C330 73.4 330 78.7 340 78.7C350 78.7 350 83 360 83C370 83 370 86.4 380 86.4C390 86.4 390 88.9 400 88.9C410 88.9 410 90.5 420 90.5C430 90.5 430 91.1 440 91.1C450 91.1 450 90.9 460 90.9C470 90.9 470 89.8 480 89.8C490 89.8 490 87.9 500 87.9C510 87.9 510 85.2 520 85.2C530 85.2 530 81.9 540 81.9C550 81.9 550 77.9 560 77.9C570 77.9 570 73.2 580 73.2C590 73.2 590 68 600 68C610 68 610 62.4 620 62.4C630 62.4 630 57.2 640 57.2C650 57.2 650 53.5 660 53.5C670 53.5 670 52.2 680 52.2C690 52.2 690 54.3 700 54.3C710 54.3 710 59.5 720 59.5C730 59.5 730 67 740 67C750 67 750 75.5 760 75.5C770 75.5 770 83.7 780 83.7C790 83.7 790 90.5 800 90.5C810 90.5 810 95.6 820 95.6C830 95.6 830 99 840 99C850 99 850 101.1 860 101.1C870 101.1 870 102.3 880 102.3C890 102.3 890 102.8 900 102.8C910 102.8 910 102.8 920 102.8C930 102.8 930 102.3 940 102.3C950 102.3 950 99.8 960 99.8C970 99.8 970 92.4 980 92.4C990 92.4 990 84.1 1000 84.1C1010 84.1 1010 78.6 1020 78.6C1030 78.6 1030 75.1 1040 75.1C1050 75.1 1050 72.3 1060 72.3C1070 72.3 1070 69.3 1080 69.3C1090 69.3 1090 64.5 1100 64.5C1110 64.5 1110 58.6 1120 58.6C1130 58.6 1130 55 1140 55C1150 55 1150 55.3 1160 55.3C1170 55.3 1170 60.2 1180 60.2C1190 60.2 1190 69.3 1200 69.3C1210 69.3 1210 77.7 1220 77.7C1230 77.7 1230 81.5 1240 81.5C1250 81.5 1250 83.6 1260 83.6C1270 83.6 1270 85 1280 85C1290 85 1290 85.5 1300 85.5C1310 85.5 1310 83.9 1320 83.9C1330 83.9 1330 80 1340 80C1350 80 1350 76.5 1360 76.5C1370 76.5 1370 75.6 1380 75.6C1390 75.6 1390 75.8 1400 75.8C1410 75.8 1410 75.2 1420 75.2C1430 75.2 1430 74.4 1440 74.4L1440 200Z"/></g><g class="dl dl-4"><path d="M0 200L0 99.9C10 99.9 10 99.9 20 99.9C30 99.9 30 99.9 40 99.9C50 99.9 50 99.9 60 99.9C70 99.9 70 100 80 100C90 100 90 100.5 100 100.5C110 100.5 110 101.9 120 101.9C130 101.9 130 104.9 140 104.9C150 104.9 150 108.4 160 108.4C170 108.4 170 109 180 109C190 109 190 106 200 106C210 106 210 102.5 220 102.5C230 102.5 230 100.7 240 100.7C250 100.7 250 101.4 260 101.4C270 101.4 270 103.9 280 103.9C290 103.9 290 107.1 300 107.1C310 107.1 310 109.7 320 109.7C330 109.7 330 110.8 340 110.8C350 110.8 350 109.6 360 109.6C370 109.6 370 105.4 380 105.4C390 105.4 390 99.4 400 99.4C410 99.4 410 93.2 420 93.2C430 93.2 430 87.4 440 87.4C450 87.4 450 82.9 460 82.9C470 82.9 470 79.5 480 79.5C490 79.5 490 76.9 500 76.9C510 76.9 510 74.8 520 74.8C530 74.8 530 73.3 540 73.3C550 73.3 550 72.7 560 72.7C570 72.7 570 73.5 580 73.5C590 73.5 590 76.2 600 76.2C610 76.2 610 80.6 620 80.6C630 80.6 630 86.2 640 86.2C650 86.2 650 91.6 660 91.6C670 91.6 670 95.2 680 95.2C690 95.2 690 96.7 700 96.7C710 96.7 710 96.2 720 96.2C730 96.2 730 93.9 740 93.9C750 93.9 750 92.7 760 92.7C770 92.7 770 93.3 780 93.3C790 93.3 790 94.2 800 94.2C810 94.2 810 94.9 820 94.9C830 94.9 830 95.8 840 95.8C850 95.8 850 96.9 860 96.9C870 96.9 870 98.2 880 98.2C890 98.2 890 99.5 900 99.5C910 99.5 910 100.7 920 100.7C930 100.7 930 102 940 102C950 102 950 104 960 104C970 104 970 107.9 980 107.9C990 107.9 990 114.2 1000 114.2C1010 114.2 1010 120.4 1020 120.4C1030 120.4 1030 123.3 1040 123.3C1050 123.3 1050 123.8 1060 123.8C1070 123.8 1070 123.9 1080 123.9C1090 123.9 1090 123.9 1100 123.9C1110 123.9 1110 124 1120 124C1130 124 1130 124.1 1140 124.1C1150 124.1 1150 124.3 1160 124.3C1170 124.3 1170 124.8 1180 124.8C1190 124.8 1190 125.7 1200 125.7C1210 125.7 1210 127 1220 127C1230 127 1230 128.9 1240 128.9C1250 128.9 1250 131.1 1260 131.1C1270 131.1 1270 133.2 1280 133.2C1290 133.2 1290 134.8 1300 134.8C1310 134.8 1310 135.6 1320 135.6C1330 135.6 1330 135.9 1340 135.9C1350 135.9 1350 136 1360 136C1370 136 1370 136 1380 136C1390 136 1390 136 1400 136C1410 136 1410 136 1420 136C1430 136 1430 136 1440 136L1440 200Z"/></g><g class="dl dl-5"><path d="M0 200L0 153.9C10 153.9 10 155 20 155C30 155 30 156 40 156C50 156 50 156.7 60 156.7C70 156.7 70 156.3 80 156.3C90 156.3 90 154.6 100 154.6C110 154.6 110 152.4 120 152.4C130 152.4 130 150.9 140 150.9C150 150.9 150 151.2 160 151.2C170 151.2 170 153.6 180 153.6C190 153.6 190 157.1 200 157.1C210 157.1 210 160.6 220 160.6C230 160.6 230 163.3 240 163.3C250 163.3 250 164.8 260 164.8C270 164.8 270 165.2 280 165.2C290 165.2 290 164.9 300 164.9C310 164.9 310 164 320 164C330 164 330 162.7 340 162.7C350 162.7 350 161.1 360 161.1C370 161.1 370 159.3 380 159.3C390 159.3 390 157.3 400 157.3C410 157.3 410 155.2 420 155.2C430 155.2 430 153.2 440 153.2C450 153.2 450 151.4 460 151.4C470 151.4 470 149.9 480 149.9C490 149.9 490 148.9 500 148.9C510 148.9 510 148.4 520 148.4C530 148.4 530 148.4 540 148.4C550 148.4 550 149 560 149C570 149 570 150.1 580 150.1C590 150.1 590 151.5 600 151.5C610 151.5 610 153.3 620 153.3C630 153.3 630 155.2 640 155.2C650 155.2 650 157.1 660 157.1C670 157.1 670 158.9 680 158.9C690 158.9 690 160.5 700 160.5C710 160.5 710 161.8 720 161.8C730 161.8 730 162.4 740 162.4C750 162.4 750 162.3 760 162.3C770 162.3 770 161.2 780 161.2C790 161.2 790 158.8 800 158.8C810 158.8 810 154.9 820 154.9C830 154.9 830 149 840 149C850 149 850 142.1 860 142.1C870 142.1 870 136.3 880 136.3C890 136.3 890 133 900 133C910 133 910 132.3 920 132.3C930 132.3 930 133.7 940 133.7C950 133.7 950 135.9 960 135.9C970 135.9 970 138.3 980 138.3C990 138.3 990 140.3 1000 140.3C1010 140.3 1010 141.8 1020 141.8C1030 141.8 1030 143 1040 143C1050 143 1050 144.1 1060 144.1C1070 144.1 1070 145.1 1080 145.1C1090 145.1 1090 146.1 1100 146.1C1110 146.1 1110 147.2 1120 147.2C1130 147.2 1130 148.2 1140 148.2C1150 148.2 1150 149.5 1160 149.5C1170 149.5 1170 151.2 1180 151.2C1190 151.2 1190 153.8 1200 153.8C1210 153.8 1210 157.4 1220 157.4C1230 157.4 1230 161.5 1240 161.5C1250 161.5 1250 165.1 1260 165.1C1270 165.1 1270 167.1 1280 167.1C1290 167.1 1290 167.8 1300 167.8C1310 167.8 1310 167.9 1320 167.9C1330 167.9 1330 168 1340 168C1350 168 1350 168 1360 168C1370 168 1370 168 1380 168C1390 168 1390 168 1400 168C1410 168 1410 168 1420 168C1430 168 1430 168 1440 168L1440 200Z"/></g>
 </svg></div>
@@ -492,7 +510,7 @@ a{color:inherit}
 <!-- ============================================================ contact -->
 <section class="band band--ink cta" id="contact" style="background:var(--ink-2)">
   <div class="wrap">
-    <div class="rv"><h2>Tell him what the garden is doing.</h2>
+    <div class="rv"><h2>Tell him what you are dealing with.</h2>
       <a class="tel" href="tel:+447546335805">07546&nbsp;335805</a></div>
     <div class="cta-meta rv">
       <div><h3>Where</h3><p>64 Southampton Road<br>Lymington SO41 9GQ</p></div>

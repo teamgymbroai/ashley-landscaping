@@ -110,8 +110,8 @@ const DIVIDERS = {
   B: divider('b', 771203,   { back: 44, amp: 38, flatShare: 0.30 }, 'divider--to-ink'),
   // dark band hands back up to chalk
   C: divider('c', 5540912,  { back: 54, amp: 32, flatShare: 0.18 }, 'divider--to-chalk'),
-  // chalk hands down to the closing dark band
-  D: divider('d', 31889,    { back: 40, amp: 41, flatShare: 0.34 }, 'divider--to-ink'),
+  // the gallery and the reviews are both dark: a ridge, not a handover
+  D: divider('d', 31889,    { back: 40, amp: 41, flatShare: 0.34 }, 'divider--in-ink'),
 };
 
 /* ------------------------------------------------------------------ */
