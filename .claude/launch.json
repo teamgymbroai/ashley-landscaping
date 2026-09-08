@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ashley",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "serve", "C:/Users/NDK Home/projects/ashley-landscaping/site", "-l", "4321", "--no-clipboard"],
+      "port": 4321
+    }
+  ]
+}

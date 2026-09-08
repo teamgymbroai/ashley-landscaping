@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashley Landscaping | Regrades, sleeper walls and patios in Lymington</title>
+<meta name="description" content="Hard landscaping across Lymington and the New Forest. Garden regrades, sleeper retaining walls, patios, driveways, fencing and slatted gates. 5.0 from 22 Google reviews.">
+<meta name="theme-color" content="#1B2A21">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ashley Landscaping | Lymington, New Forest">
+<meta property="og:description" content="Garden regrades, sleeper retaining walls, patios and driveways. Twenty years in the New Forest.">
+<meta property="og:image" content="i/hero-1184.webp">
+<meta property="og:locale" content="en_GB">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="i/hero-1184.webp" imagesrcset="i/hero-400.webp 400w, i/hero-700.webp 700w, i/hero-1000.webp 1000w, i/hero-1184.webp 1184w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@1&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+
+<style>
+/* ================================================================ tokens */
+:root{
+  --chalk:#F3EFE6; --chalk-2:#E8E2D4; --paper:#FAF8F2;
+  --ink:#1B2A21; --ink-2:#121D17;
+  --stone:#5C625A;
+  --brass:#B69662; --brass-ink:#75592F; --brass-deep:#5E4726;
+  --rule:rgba(27,42,33,.16); --rule-ink:rgba(243,239,230,.16);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --gut:clamp(1.25rem,5vw,4.5rem);
+  --stack:clamp(4.5rem,9vw,9rem);
+  --maxw:1360px;
+  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --fs-body:clamp(1.0625rem,.98rem + .35vw,1.1875rem);
+  --fs-lead:clamp(1.1875rem,1.05rem + .7vw,1.5rem);
+  --fs-h1:clamp(2.2rem,1.05rem + 5.4vw,5.75rem);
+  --fs-h2:clamp(1.95rem,1.25rem + 2.9vw,3.35rem);
+  --p:0;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--ink);overflow-x:hidden;
+  font-family:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:var(--fs-body);line-height:1.62;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{margin:0;font-weight:500;text-wrap:balance}
+h1{font-size:var(--fs-h1);line-height:.94;letter-spacing:-.035em;text-wrap:pretty}
+h2{font-size:var(--fs-h2);line-height:1.02;letter-spacing:-.028em}
+h3{font-size:clamp(1.1rem,1rem + .45vw,1.4rem);line-height:1.2;letter-spacing:-.014em;font-weight:600}
+p{margin:0 0 1.1em} p:last-child{margin-bottom:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+[id]{scroll-margin-top:96px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+.lead{font-size:var(--fs-lead);line-height:1.42;letter-spacing:-.012em;color:var(--stone)}
+.label{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--ink);color:var(--chalk);padding:.7rem 1rem;border-radius:3px}
+.head{max-width:62ch}
+.head::before{content:"";display:block;width:52px;height:2px;background:var(--brass);margin-bottom:1.25rem;transform-origin:left}
+.head h2{margin-bottom:.85rem}
+.band--ink .head .lead{color:rgba(243,239,230,.74)}
+.band{padding-block:var(--stack)}
+.band--ink{background:var(--ink);color:var(--chalk)}
+
+/* ================================================================ buttons */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-size:.9375rem;font-weight:600;
+  padding:.85rem 1.35rem;border-radius:3px;text-decoration:none;border:1px solid transparent;white-space:nowrap;
+  transition:transform 140ms var(--ease),background-color 140ms var(--ease),border-color 140ms var(--ease),color 140ms var(--ease)}
+.btn-chalk{background:var(--chalk);color:var(--ink)}
+.btn-brass{border-color:var(--brass);color:var(--brass)}
+.btn svg{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform 160ms var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .btn-chalk:hover{background:#fff;transform:translateY(-1px)}
+  .btn-brass:hover{background:var(--brass);color:var(--ink)}
+  .btn:hover svg.arrow{transform:translateX(3px)}
+}
+.btn:active{transform:scale(.985)}
+
+/* ================================================================ header */
+.hdr{position:fixed;inset:0 0 auto;z-index:40;height:64px;display:flex;align-items:center;
+  transition:background-color 240ms var(--ease)}
+.hdr::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(18,29,23,.74),rgba(18,29,23,.34) 62%,rgba(18,29,23,0));
+  transition:opacity 240ms var(--ease)}
+.hdr::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);
+  transform:scaleX(0);transform-origin:left;opacity:.7;transition:transform 520ms var(--ease)}
+.hdr.is-stuck{background:rgba(18,29,23,.94);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+.hdr.is-stuck::before{opacity:0}
+.hdr.is-stuck::after{transform:scaleX(1)}
+.hdr .wrap{display:flex;align-items:center;gap:1.5rem;width:100%}
+.mark{font-weight:600;font-size:1rem;letter-spacing:-.02em;color:var(--chalk);text-decoration:none;line-height:1.05;flex:none}
+.mark span{display:block;font-size:.6875rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-top:.18rem}
+.nav{display:none;margin-left:auto;gap:1.9rem;align-items:center}
+.nav a{color:rgba(243,239,230,.84);text-decoration:none;font-size:.9375rem;font-weight:500;position:relative;padding-block:.3rem}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform 220ms var(--ease)}
+@media (hover:hover) and (pointer:fine){.nav a:hover::after{transform:scaleX(1)}}
+.hdr-cta{margin-left:auto;display:flex;align-items:center;gap:1rem}
+.hdr-rating{display:none;font-size:.8125rem;color:rgba(243,239,230,.7);white-space:nowrap}
+.hdr-rating b{color:var(--brass);font-weight:600}
+.hdr .btn{padding:.6rem 1.05rem;font-size:.875rem}
+@media (min-width:900px){.hdr{height:80px}.nav{display:flex}.hdr-cta{margin-left:0}.hdr-rating{display:block}}
+
+/* ================================================================ hero */
+.hero{position:relative;min-height:100dvh;display:grid;align-items:end;overflow:hidden;background:var(--ink-2)}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:44% 74%}
+@media (min-width:760px){.hero-img img{object-position:50% 64%}}
+.hero-img::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(18,29,23,.70),rgba(18,29,23,.30) 24%,rgba(18,29,23,.16) 42%,rgba(18,29,23,.64) 74%,rgba(18,29,23,.88)),
+  linear-gradient(96deg,rgba(18,29,23,.68),rgba(18,29,23,.42) 38%,rgba(18,29,23,.06) 68%,rgba(18,29,23,0))}
+.hero>.divider{position:absolute;left:0;right:0;bottom:-1px;z-index:2}
+.hero .wrap{padding-bottom:clamp(9rem,20vh,15rem);padding-top:7rem;width:100%;position:relative;z-index:3}
+.hero h1{color:var(--chalk);max-width:15ch;text-shadow:0 1px 30px rgba(18,29,23,.35)}
+.hero p{color:rgba(243,239,230,.94);max-width:42ch;margin:1.4rem 0 2.1rem;font-size:var(--fs-lead);line-height:1.42}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes settle{from{transform:scale(1.06)}to{transform:scale(1)}}
+  @keyframes rise-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  .hero-img img{animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1{animation:rise-in 760ms var(--ease) 120ms both}
+  .hero p{animation:rise-in 760ms var(--ease) 260ms both}
+  .hero .btn{animation:rise-in 760ms var(--ease) 400ms both}
+}
+
+/* ================================================================ dividers
+   The svg keeps its own 1440x200 ratio so crests are never sliced off by the
+   section above. Below 760px it takes a fixed height and crops the sides
+   instead, which keeps the landforms in proportion on a phone. */
+.divider{position:relative;line-height:0;pointer-events:none}
+.divider svg{display:block;width:100%;height:auto;aspect-ratio:1440/200}
+@media (max-width:759px){.divider svg{height:112px;aspect-ratio:auto}}
+.divider .dl path{fill:currentColor}
+.dl-1{color:#B9C4A9} .dl-2{color:#93A587} .dl-3{color:#6C8466} .dl-4{color:#45604A}
+.divider--onphoto .dl-1{color:#3E5644} .divider--onphoto .dl-2{color:#5C765A}
+.divider--onphoto .dl-3{color:#7F9878} .divider--onphoto .dl-4{color:#B3C1A4}
+.divider--onphoto .dl-5{color:var(--chalk)}
+.divider--to-ink{background:var(--chalk)} .divider--to-ink .dl-5{color:var(--ink)}
+.divider--to-chalk{background:var(--ink)}
+.divider--to-chalk .dl-1{color:#2A3F31} .divider--to-chalk .dl-2{color:#3B5641}
+.divider--to-chalk .dl-3{color:#567355} .divider--to-chalk .dl-4{color:#869E7C}
+.divider--to-chalk .dl-5{color:var(--chalk)}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes glide-a{0%,100%{transform:translateX(0)}50%{transform:translateX(-16px)}}
+  @keyframes glide-b{0%,100%{transform:translateX(0)}50%{transform:translateX(9px)}}
+  .divider .dl-1{animation:glide-a 46s ease-in-out infinite}
+  .divider .dl-2{animation:glide-b 37s ease-in-out infinite}
+}
+
+/* ================================================================ the regrade
+   A tall track with a pinned stage. Six panels sit side by side and the whole
+   strip slides left as the track scrolls, so each stage arrives from the side.
+   Driven by --p from script, so it runs in every browser rather than only
+   where scroll-driven CSS animations are supported. */
+.regrade{background:var(--chalk);padding-top:var(--stack)}
+.track{position:relative;height:400vh}
+.stage{position:sticky;top:0;height:100dvh;overflow:hidden;display:flex;flex-direction:column}
+/* percentages on translate resolve against the strip's own width, and the
+   strip is six panels wide, so travelling five panels is 5/6 of itself */
+.strip{flex:1;display:flex;width:600%;min-height:0;
+  transform:translate3d(calc(var(--p) * -83.3333%),0,0);will-change:transform}
+.panel{width:16.6667%;flex:none;display:grid;grid-template-rows:56dvh 1fr}
+.panel-pic{position:relative;overflow:hidden;background:var(--ink-2)}
+.panel-pic img{width:100%;height:100%;object-fit:cover}
+.panel-copy{padding:1.5rem var(--gut) 3rem;display:grid;align-content:start;gap:.4rem}
+.panel-copy h3{display:flex;gap:.8rem;align-items:baseline}
+.panel-copy h3 i{font-style:normal;font-size:.75rem;letter-spacing:.1em;color:var(--brass-ink);flex:none;font-variant-numeric:tabular-nums}
+.panel-copy p{color:var(--stone);font-size:1rem;line-height:1.55;max-width:46ch}
+.tag{position:absolute;left:1rem;top:calc(64px + 1rem);font-size:.75rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;padding:.45rem .7rem .4rem;border-radius:2px;border:1px solid}
+.tag-b{color:var(--chalk);background:rgba(18,29,23,.72);border-color:rgba(243,239,230,.22)}
+.tag-a{color:var(--ink);background:var(--brass);border-color:var(--brass)}
+.rail{position:absolute;left:var(--gut);right:var(--gut);bottom:1.1rem;z-index:5;display:flex;align-items:center;gap:1rem}
+.rail-line{flex:1;height:2px;background:var(--rule);position:relative;overflow:hidden}
+.rail-line i{position:absolute;inset:0;background:var(--brass);transform-origin:left;transform:scaleX(var(--praw,0))}
+.rail-no{font-size:.8125rem;font-weight:600;letter-spacing:.1em;color:var(--brass-deep);font-variant-numeric:tabular-nums}
+@media (min-width:900px){
+  .panel{grid-template-rows:none;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:stretch}
+  .panel-copy{order:-1;align-content:center;gap:0;
+    padding:calc(80px + 2rem) clamp(2.5rem,4vw,4rem) clamp(3rem,7vh,5rem) var(--gut)}
+  .panel-copy h3{display:block;font-size:clamp(1.55rem,1.05rem + 1.35vw,2.3rem);font-weight:500;letter-spacing:-.022em}
+  .panel-copy h3 i{display:block;font-size:.8125rem;letter-spacing:.17em;margin-bottom:.95rem}
+  .panel-copy p{font-size:1.125rem;line-height:1.6;max-width:36ch;margin-top:1.1rem}
+  /* inset, so it reads as a plate rather than wallpaper */
+  .panel-pic{border-radius:3px;
+    margin:calc(80px + clamp(1.5rem,3vh,2.5rem)) clamp(2rem,4vw,4rem) clamp(3.5rem,8vh,5.5rem) 0}
+  .tag{left:1.2rem;top:1.2rem}
+}
+
+/* the section drawing: one line that unfolds from the fall into the levels */
+.datum{background:var(--chalk-2)}
+.datum-track{position:relative;height:230vh}
+.datum-pin{position:sticky;top:0;height:100dvh;display:grid;align-content:center;overflow:hidden}
+.datum-in{max-width:min(100%,940px);margin:0 auto}
+.datum svg{width:100%;height:auto;display:block}
+.datum-head{margin-bottom:clamp(1.6rem,4vh,2.8rem)}
+.datum-head::before{content:"";display:block;width:52px;height:2px;background:var(--brass);margin-bottom:1.1rem}
+.datum-head .label{margin-bottom:.7rem}
+.datum-head h3{font-size:clamp(1.5rem,1.1rem + 1.5vw,2.4rem);font-weight:500;letter-spacing:-.024em;line-height:1.08;max-width:20ch}
+.datum-note{margin-top:1.4rem;font-size:1rem;color:var(--stone);line-height:1.55;max-width:56ch}
+
+/* ================================================================ two generations */
+.gen .lead{margin-top:1.3rem;max-width:58ch;color:rgba(243,239,230,.82);
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,1.05rem + .9vw,1.7rem);line-height:1.45}
+.facts{display:grid;gap:1px;background:var(--rule-ink);border-block:1px solid var(--rule-ink);
+  margin-top:clamp(2.5rem,5vw,4rem);grid-template-columns:1fr}
+.fact{background:var(--ink);padding:1.5rem 0}
+.fact dt{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.fact dd{margin:.5rem 0 0;font-size:clamp(1.5rem,1.1rem + 1.5vw,2.3rem);line-height:1.05;letter-spacing:-.03em;font-weight:500}
+.fact dd small{display:block;margin-top:.45rem;font-size:.875rem;font-weight:500;color:rgba(243,239,230,.6)}
+@media (min-width:640px){.facts{grid-template-columns:repeat(3,1fr)}.fact{padding:1.7rem 1.6rem}.fact:first-child{padding-left:0}}
+
+/* ================================================================ services rail */
+.rail-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.arrows{display:none;gap:.5rem}
+.arrows button{width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);background:none;color:var(--ink);
+  cursor:pointer;display:grid;place-items:center;transition:background-color 140ms var(--ease),border-color 140ms var(--ease),opacity 140ms var(--ease)}
+.arrows button:disabled{opacity:.3;cursor:default}
+.arrows svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (hover:hover) and (pointer:fine){.arrows button:not(:disabled):hover{background:var(--ink);border-color:var(--ink);color:var(--chalk)}}
+@media (min-width:900px){.arrows{display:flex}}
+.cards{display:flex;gap:clamp(.9rem,1.8vw,1.4rem);margin-top:clamp(2rem,4vw,3rem);
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-inline:var(--gut);padding-bottom:1.2rem;scrollbar-width:none}
+.cards::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(78vw,340px);scroll-snap-align:start}
+.card .pic{aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:var(--chalk-2)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 900ms var(--ease)}
+.card h3{margin-top:1rem;display:flex;gap:.75rem;align-items:baseline}
+.card h3 i{font-style:normal;font-size:.75rem;letter-spacing:.1em;color:var(--brass-ink);flex:none;font-variant-numeric:tabular-nums}
+.card p{margin-top:.4rem;font-size:.9375rem;line-height:1.5;color:var(--stone)}
+@media (hover:hover) and (pointer:fine){.card:hover img{transform:scale(1.05)}}
+
+/* ================================================================ gallery */
+.gallery{background:var(--ink);padding-bottom:0}
+.gallery h2{color:var(--chalk)}
+.mosaic{display:grid;gap:2px;margin-top:clamp(2rem,4vw,3rem);grid-template-columns:1fr 1fr}
+.mosaic figure{margin:0;position:relative;overflow:hidden;background:var(--ink-2);aspect-ratio:1/1}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform 1000ms var(--ease)}
+.mosaic figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.1rem .9rem;
+  font-size:.8125rem;line-height:1.4;color:var(--chalk);
+  background:linear-gradient(180deg,rgba(18,29,23,0),rgba(18,29,23,.88))}
+@media (hover:hover) and (pointer:fine){
+  .mosaic figcaption{opacity:0;transform:translateY(8px);transition:opacity 260ms var(--ease),transform 260ms var(--ease)}
+  .mosaic figure:hover img{transform:scale(1.04)}
+  .mosaic figure:hover figcaption{opacity:1;transform:none}
+}
+@media (min-width:900px){.mosaic{grid-template-columns:repeat(4,1fr)}.mosaic figure{aspect-ratio:3/4}}
+
+/* ================================================================ reviews */
+.revs{background:var(--ink);padding-block:var(--stack);overflow:hidden}
+.revs-head{text-align:center;max-width:34rem;margin:0 auto;padding-inline:var(--gut)}
+.revs-head h2{color:var(--chalk);margin-bottom:1.6rem}
+.big-stars{display:flex;justify-content:center;gap:.35rem;margin-bottom:1.4rem}
+.big-stars svg{width:clamp(28px,5.5vw,44px);height:clamp(28px,5.5vw,44px);fill:var(--brass);display:block}
+.tickers{margin-top:clamp(2.5rem,5vw,4rem);display:grid;gap:clamp(.9rem,1.8vw,1.3rem);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.ticker{overflow:hidden}
+.lane{display:flex;gap:clamp(.9rem,1.8vw,1.3rem);width:max-content;animation:march 74s linear infinite}
+.lane--back{animation-direction:reverse}
+@keyframes march{to{transform:translateX(-50%)}}
+.ticker:hover .lane,.ticker:focus-within .lane{animation-play-state:paused}
+.quote{flex:0 0 min(82vw,400px);background:var(--paper);color:var(--ink);border-radius:3px;
+  padding:clamp(1.2rem,2.2vw,1.6rem);display:grid;align-content:start;gap:.75rem}
+.quote .stars{display:flex;gap:2px}
+.quote .stars svg{width:13px;height:13px;fill:var(--brass);display:block}
+.quote p{font-size:.9375rem;line-height:1.55;margin:0}
+.quote footer{font-size:.8125rem;color:var(--stone)}
+.quote footer b{display:block;color:var(--ink);font-weight:600}
+
+/* ================================================================ contact */
+.cta h2{max-width:16ch}
+.tel{display:inline-block;margin-top:1.8rem;text-decoration:none;color:var(--chalk);position:relative;
+  font-size:clamp(2rem,1.1rem + 4.4vw,4rem);line-height:1;letter-spacing:-.038em;font-weight:500;
+  font-variant-numeric:tabular-nums;transition:color 160ms var(--ease)}
+.tel::after{content:"";position:absolute;left:0;right:0;bottom:-.18em;height:2px;background:var(--brass)}
+@media (hover:hover) and (pointer:fine){.tel:hover{color:var(--brass)}}
+.cta-meta{display:grid;gap:1.6rem;margin-top:clamp(2.5rem,5vw,3.5rem);grid-template-columns:1fr}
+.cta-meta h3{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:.5rem}
+.cta-meta p{color:rgba(243,239,230,.86);font-size:1rem;line-height:1.5}
+@media (min-width:640px){.cta-meta{grid-template-columns:repeat(3,1fr);gap:2rem}}
+.ftr{background:var(--ink-2);color:rgba(243,239,230,.55);padding-block:2.2rem;font-size:.8125rem;line-height:1.6}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-between}
+.ftr a{color:rgba(243,239,230,.75)}
+.ftr .note{width:100%;padding-top:1.2rem;margin-top:.4rem;border-top:1px solid rgba(243,239,230,.1);color:rgba(243,239,230,.42)}
+
+/* ================================================================ reveals
+   Only applied once script confirms it can bring them back, so a missed
+   trigger can never leave the page blank. */
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in{opacity:1;transform:none;transition:opacity 700ms var(--ease),transform 760ms var(--ease)}
+.js .head::before{transform:scaleX(0)}
+.js .head.in::before,.js .in .head::before{transform:scaleX(1);transition:transform 620ms var(--ease) 120ms}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  .js .head::before{transform:none}
+  .track{height:auto}
+  .stage{position:static;height:auto;overflow:visible}
+  .strip{width:100%;flex-direction:column;transform:none}
+  .panel{width:100%;grid-template-rows:none;grid-template-columns:1fr;margin-bottom:2.5rem}
+  .panel-pic{aspect-ratio:4/3}
+  .panel-copy{padding-inline:var(--gut)}
+  .rail{display:none}
+  .datum-track{height:auto}
+  .datum-pin{position:static;height:auto;padding-block:clamp(3rem,7vw,5.5rem)}
+  .lane{animation:none}
+  .tickers{-webkit-mask-image:none;mask-image:none}
+  .ticker{overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="mark" href="#top">Ashley Landscaping<span>Lymington &middot; New Forest</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#regrade">The regrade</a><a href="#services">What he builds</a><a href="#reviews">Reviews</a>
+    </nav>
+    <div class="hdr-cta">
+      <span class="hdr-rating"><b>5.0</b> &middot; 22 Google reviews</span>
+      <a class="btn btn-chalk" href="tel:+447546335805">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+        07546 335805
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main"><span id="top"></span>
+
+<!-- ============================================================ hero -->
+<section class="hero">
+  <div class="hero-img">{{IMG:hero|A terraced back garden with two levels of new oak sleeper retaining wall, sandstone-capped steps and freshly laid lawn under a clear blue sky.|100vw|eager}}</div>
+  <div class="wrap">
+    <h1>Difficult gardens, levelled and rebuilt.</h1>
+    <p>Regrades, sleeper walls, patios and driveways. Lymington and the New Forest, twenty years.</p>
+    <a class="btn btn-chalk" href="tel:+447546335805">Call 07546 335805</a>
+  </div>
+  {{DIVIDER_A}}
+</section>
+
+<!-- ============================================================ the regrade -->
+<section class="regrade" id="regrade">
+  <div class="wrap"><div class="head rv"><p class="label">A garden in Lymington</p><h2>Ten feet of fall, taken out.</h2></div></div>
+
+  <div class="track" data-scrub="track">
+    <div class="stage">
+      <div class="strip">
+        <article class="panel">
+          <div class="panel-pic"><span class="tag tag-b">Before</span>{{IMG:b-slope|Rough uncut grass running down a steep slope, with ladders and timber leaning against a green summerhouse.|(min-width:900px) 60vw, 100vw|low}}</div>
+          <div class="panel-copy"><h3><i>01</i>As he found it</h3><p>Ten feet of drop from the house to the back boundary, and nowhere level enough to put a chair.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-pic"><span class="tag tag-b">Before</span>{{IMG:b-house|An old green summerhouse with rotten decking, overgrown grasses and a mossy boundary fence behind.|(min-width:900px) 60vw, 100vw|low}}</div>
+          <div class="panel-copy"><h3><i>02</i>The summerhouse</h3><p>Sitting out on the slope on decking gone soft. All of it in the way of the levels.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-pic"><span class="tag tag-b">Before</span>{{IMG:b-clear|The same garden mid clearance: bare worn ground, a cement mixer and a water butt under the trees.|(min-width:900px) 60vw, 100vw|low}}</div>
+          <div class="panel-copy"><h3><i>03</i>Cleared</h3><p>Greenhouse, decking and overgrowth out. Mixer in. The levels set before anything went back.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-pic"><span class="tag tag-a">After</span>{{IMG:a-shed|A new timber shed on freshly laid turf, with an oak sleeper retaining wall running the width of the garden.|(min-width:900px) 60vw, 100vw|low}}</div>
+          <div class="panel-copy"><h3><i>04</i>Levelled and walled</h3><p>Sleeper retaining walls holding each level, and a shed where the greenhouse used to lean.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-pic"><span class="tag tag-a">After</span>{{IMG:a-seat|A sunken seating bay framed in oak sleepers with two loungers, beside a slatted timber gate and matching fence panels.|(min-width:900px) 60vw, 100vw|low}}</div>
+          <div class="panel-copy"><h3><i>05</i>The seating bay</h3><p>Cut into the lawn and framed in sleepers, with the slatted gate and fence panels along the boundary.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-pic"><span class="tag tag-a">After</span>{{IMG:a-lawn|A level lawn edged in corten steel, sleeper retaining walls stepping up to the house, and a sunken seating bay under a mature tree.|(min-width:900px) 60vw, 100vw|low}}</div>
+          <div class="panel-copy"><h3><i>06</i>Finished</h3><p>Two level lawns where the fall used to be, sandstone steps between them, corten edging to the borders.</p></div>
+        </article>
+      </div>
+      <div class="rail" aria-hidden="true">
+        <span class="rail-no" id="railNo">01</span><span class="rail-line"><i></i></span><span class="rail-no">06</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="datum"><div class="datum-track" data-scrub="datum"><div class="datum-pin"><div class="wrap"><figure class="datum-in">
+    <figcaption class="datum-head">
+      <p class="label">Section through the garden</p>
+      <h3>What the sleeper walls are actually holding up.</h3>
+    </figcaption>
+    <svg viewBox="0 0 560 280" role="img" aria-label="A section through the garden. The ground fell about ten feet in one continuous slope from the base of the house to the back boundary; it is now two level terraces, each held up by a sleeper retaining wall.">
+      <path id="soil" fill="#D8D1BE"></path>
+      <!-- the house, sitting on the top level: the ground leaves its base -->
+      <path d="M16 72 L78 30 L140 72 Z" fill="#1B2A21"></path>
+      <rect x="30" y="72" width="96" height="50" fill="#1B2A21"></rect>
+      <rect x="66" y="98" width="24" height="24" fill="#E8E2D4"></rect>
+      <path id="line" fill="none" stroke="#1B2A21" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
+      <g stroke="#1B2A21" stroke-width="2" opacity=".55" fill="none">
+        <path d="M534 122 L534 244"></path><path d="M528 130 L534 118 L540 130"></path><path d="M528 236 L534 248 L540 236"></path>
+      </g>
+      <text x="518" y="190" font-size="19" font-weight="600" fill="#1B2A21" text-anchor="end">10 ft</text>
+      <text id="lbl1" x="182" y="162" font-size="18" font-weight="600" fill="#75592F" transform="rotate(17.3 182 162)">the fall it had</text>
+      <text id="lbl2" x="146" y="110" font-size="18" font-weight="600" fill="#1B2A21" opacity="0">two level lawns</text>
+    </svg>
+    <p class="datum-note">The fall the garden had, folding into what is there now: two level lawns, each held up by a sleeper retaining wall, with sandstone steps between them.</p>
+  </figure></div></div></div></div>
+
+</section>
+
+{{DIVIDER_B}}
+
+<!-- ============================================================ two generations -->
+<section class="band band--ink gen">
+  <div class="wrap">
+    <div class="head rv"><h2>Two generations on the same patch.</h2>
+      <p class="lead">Peter started Ashley Landscaping and spent more than twenty years working New Forest gardens. Tyler runs the work now. Several of the reviews are from people who have used both.</p></div>
+    <dl class="facts rv">
+      <div class="fact"><dt>Google rating</dt><dd>5.0<small>Every one of the 22 reviews is five stars</small></dd></div>
+      <div class="fact"><dt>Based</dt><dd>Lymington<small>Southampton Road, SO41</small></dd></div>
+      <div class="fact"><dt>In business</dt><dd>20+ years<small>Peter, and now Tyler</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+{{DIVIDER_C}}
+
+<!-- ============================================================ services -->
+<section class="band services" id="services" style="padding-bottom:clamp(3rem,6vw,5rem)">
+  <div class="wrap">
+    <div class="rail-head rv">
+      <div class="head"><h2>What he builds.</h2><p class="lead">Every line here comes from something a customer described in a review.</p></div>
+      <div class="arrows">
+        <button type="button" data-cards="-1" aria-label="Previous services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+        <button type="button" data-cards="1" aria-label="Next services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="cards" id="cards" tabindex="0" role="group" aria-label="Services">
+    <article class="card"><div class="pic">{{IMG:s-ground|Ground levelled and framed with new sleepers before paving.|340px}}</div><h3><i>01</i>Levelling and groundworks</h3><p>Regrading, cutting into banks, turf and topsoil out, hardcore, chippings and edging in.</p></article>
+    <article class="card"><div class="pic">{{IMG:s-patio|A large Indian sandstone patio running the length of a brick house, edged with brick soldier courses.|340px}}</div><h3><i>02</i>Patios and paving</h3><p>Indian sandstone, porcelain, brick and setts. New patios, and recovery on paving that has dropped.</p></article>
+    <article class="card"><div class="pic">{{IMG:s-path|A reclaimed brick circle path meeting a sandstone terrace across a sleeper step.|340px}}</div><h3><i>03</i>Paths and driveways</h3><p>Drives remodelled, entrances widened, and paths laid around existing trees.</p></article>
+    <article class="card"><div class="pic">{{IMG:s-sleep|Two tiers of dark stained sleeper raised beds, newly planted, beside a gravel path.|340px}}</div><h3><i>04</i>Sleeper walls and raised beds</h3><p>Retaining walls that hold a level, and beds rebuilt in new sleepers where decking planks rotted out.</p></article>
+    <article class="card"><div class="pic">{{IMG:s-fence|A curved sandstone patio with a reclaimed brick soldier edge, against a new close boarded fence.|340px}}</div><h3><i>05</i>Fencing, gates and screens</h3><p>Close boarded fencing, arris rails, front gates to a drive, and Venetian slatted screening.</p></article>
+    <article class="card"><div class="pic">{{IMG:s-struct|A sandstone terrace with a granite sett border laid around a timber garden room.|340px}}</div><h3><i>06</i>Pergolas and structures</h3><p>Pergolas, trellis and fruit frames, and the paving that sits around a garden room.</p></article>
+    <article class="card"><div class="pic">{{IMG:s-hedge|A clipped conifer border above a cut lawn.|340px}}</div><h3><i>07</i>Hedging and clearance</h3><p>Hedges out and replaced, tree removal, and gardens that have got away from their owners.</p></article>
+  </div>
+</section>
+
+<!-- ============================================================ gallery -->
+<section class="band gallery">
+  <div class="wrap"><div class="head rv"><h2>Recent work.</h2></div></div>
+  <div class="mosaic">
+    <figure>{{IMG:m-porc|A grey large format porcelain terrace laid up to aluminium bifold doors, with a new sleeper retaining wall behind.|(min-width:900px) 25vw, 50vw}}<figcaption>Large format porcelain, laid to a fall</figcaption></figure>
+    <figure>{{IMG:m-circ|A circular sandstone patio with a granite sett edge, set into a lawn on a winter afternoon.|(min-width:900px) 25vw, 50vw}}<figcaption>A sandstone circle with a sett collar</figcaption></figure>
+    <figure>{{IMG:m-grav|A sandstone patio meeting a curved brick edged gravel bed.|(min-width:900px) 25vw, 50vw}}<figcaption>Sandstone meeting a curved brick edge</figcaption></figure>
+    <figure>{{IMG:m-dry|A reclaimed railway sleeper retaining wall with a dry stone panel set into it and gravel treads to the steps.|(min-width:900px) 25vw, 50vw}}<figcaption>Reclaimed sleepers with a dry stone panel</figcaption></figure>
+  </div>
+</section>
+
+{{DIVIDER_D}}
+
+<!-- ============================================================ reviews -->
+<section class="revs" id="reviews">
+  <div class="revs-head rv">
+    <div class="big-stars" role="img" aria-label="Rated five out of five">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9Z"></path></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9Z"></path></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9Z"></path></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9Z"></path></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9Z"></path></svg>
+    </div>
+    <h2>Five stars. Twenty two times.</h2>
+    <a class="btn btn-brass" href="https://search.google.com/local/reviews?placeid=ChIJLcTOuciGc0gR-FhWJr05Dw4" target="_blank" rel="noopener">Read them on Google <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+  </div>
+  <div class="tickers">
+    <div class="ticker"><div class="lane" data-lane="a"></div></div>
+    <div class="ticker"><div class="lane lane--back" data-lane="b"></div></div>
+  </div>
+</section>
+
+<!-- ============================================================ contact -->
+<section class="band band--ink cta" id="contact" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="rv"><h2>Tell him what the garden is doing.</h2>
+      <a class="tel" href="tel:+447546335805">07546&nbsp;335805</a></div>
+    <div class="cta-meta rv">
+      <div><h3>Where</h3><p>64 Southampton Road<br>Lymington SO41 9GQ</p></div>
+      <div><h3>Area covered</h3><p>Lymington, Brockenhurst, New Milton, Sway, Milford on Sea and the wider New Forest.</p></div>
+      <div><h3>Best for</h3><p>Jobs that need the ground sorting out first. Slopes, banks, retaining walls, full garden rebuilds.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="wrap">
+  <span>Ashley Landscaping &middot; 64 Southampton Road, Lymington SO41 9GQ</span>
+  <span><a href="tel:+447546335805">07546 335805</a></span>
+  <span class="note">Concept design. This is not an official Ashley Landscaping website. Photographs and reviews are the business&rsquo;s own, from its public Google Business Profile.</span>
+</div></footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LandscapingBusiness","name":"Ashley Landscaping","telephone":"+447546335805","address":{"@type":"PostalAddress","streetAddress":"64 Southampton Road","addressLocality":"Lymington","addressRegion":"Hampshire","postalCode":"SO41 9GQ","addressCountry":"GB"},"areaServed":["Lymington","New Forest","Brockenhurst","New Milton","Sway","Milford on Sea"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"22","bestRating":"5"}}
+</script>
+
+<script>
+(function () {
+  "use strict";
+  document.documentElement.className += " js";
+  var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
+
+  /* -------------------------------------------------------------- reveals */
+  var rv = document.querySelectorAll(".rv, .head");
+  if (still || !("IntersectionObserver" in window)) {
+    rv.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.04 });
+    rv.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { rv.forEach(function (el) { el.classList.add("in"); }); }, 4000);
+  }
+
+  /* ------------------------------------------------- scroll scrub engine
+     Publishes --p (0 to 1) on every [data-scrub] element for CSS to consume.
+
+     A passive scroll listener coalesced into a single animation frame. An
+     earlier version gated a rAF loop behind an IntersectionObserver, which
+     stalls whenever the browser throttles frames (a background or occluded
+     tab), leaving the strip frozen. Two getBoundingClientRect calls per frame
+     costs nothing, so there is no reason to be clever about it. */
+  var scrubs = [];
+  document.querySelectorAll("[data-scrub]").forEach(function (el) {
+    scrubs.push({ el: el, mode: el.getAttribute("data-scrub"), p: -1, raw: -1, onP: null });
+  });
+  var byMode = function (m) { for (var i = 0; i < scrubs.length; i++) if (scrubs[i].mode === m) return scrubs[i]; return null; };
+
+  /* A short settle on each beat, then a long eased glide to the next. A big
+     dwell reads as dead scrolling followed by a jolt, so keep it small and let
+     the easing do the work. */
+  function stair(p, steps) {
+    var seg = 1 / steps, i = Math.min(steps - 1, Math.floor(p / seg));
+    var t = (p - i * seg) / seg, dwell = 0.2;
+    t = t < dwell ? 0 : (t - dwell) / (1 - dwell);
+    return (i + t * t * (3 - 2 * t)) / steps;
+  }
+
+  var hdr = document.getElementById("hdr");
+  var queued = false;
+
+  function apply() {
+    queued = false;
+    var vh = window.innerHeight;
+    for (var i = 0; i < scrubs.length; i++) {
+      var s = scrubs[i], r = s.el.getBoundingClientRect(), raw, p, t;
+      raw = clamp(-r.top / Math.max(1, r.height - vh));
+      if (s.mode === "track") {
+        p = stair(raw, 5);
+      } else {
+        // the drawing holds still while it settles into the middle of the
+        // screen, folds over the middle stretch, then holds on the result
+        t = clamp((raw - 0.28) / 0.44);
+        p = t * t * (3 - 2 * t);
+      }
+      if (Math.abs(p - s.p) > 0.0004 || Math.abs(raw - s.raw) > 0.002) {
+        s.p = p; s.raw = raw;
+        s.el.style.setProperty("--p", p.toFixed(4));
+        s.el.style.setProperty("--praw", raw.toFixed(4));
+        if (s.onP) s.onP(p, raw);
+      }
+    }
+    if (hdr) hdr.classList.toggle("is-stuck", window.pageYOffset > vh * 0.85);
+  }
+  function onScroll() { if (!queued) { queued = true; requestAnimationFrame(apply); } }
+
+  /* ------------------------------------------- the regrade beat counter */
+  var railNo = document.getElementById("railNo");
+  var tr = byMode("track");
+  if (tr && railNo) {
+    tr.onP = function (p) {
+      var t = "0" + Math.min(6, Math.round(p * 5) + 1);
+      if (railNo.textContent !== t) railNo.textContent = t;
+    };
+  }
+
+  /* ------------------------------------------- the section drawing
+     Two profiles with the same point count, lerped point by point, so the
+     single continuous fall folds into two level terraces as you scroll. */
+  var line = document.getElementById("line"), soil = document.getElementById("soil");
+  var lbl1 = document.getElementById("lbl1"), lbl2 = document.getElementById("lbl2");
+  if (line && soil) {
+    var FALL = [[126, 122], [204, 146], [282, 171], [360, 195], [438, 220], [518, 244]];
+    var STEP = [[126, 122], [268, 122], [268, 183], [400, 183], [400, 244], [518, 244]];
+    var draw = function (p) {
+      var d = "M";
+      for (var i = 0; i < FALL.length; i++) {
+        var x = FALL[i][0] + (STEP[i][0] - FALL[i][0]) * p;
+        var y = FALL[i][1] + (STEP[i][1] - FALL[i][1]) * p;
+        d += (i ? "L" : "") + x.toFixed(1) + " " + y.toFixed(1);
+      }
+      line.setAttribute("d", d);
+      // the ground carries on under the house rather than starting beside it,
+      // otherwise the house floats and the whole mass reads as shifted right
+      soil.setAttribute("d", "M8 122L" + d.slice(1) + "L518 268L8 268Z");
+      line.setAttribute("stroke-dasharray", p < 0.45 ? "13 9" : "none");
+      lbl1.setAttribute("opacity", clamp(1 - p * 2.4).toFixed(2));
+      lbl2.setAttribute("opacity", clamp((p - 0.5) * 2.8).toFixed(2));
+    };
+    draw(still ? 1 : 0);
+    var dz = byMode("datum");
+    if (dz && !still) dz.onP = draw;
+  }
+
+  /* Start it, and keep it in step with scroll and resize. The header state
+     rides along in the same frame, rather than on its own observer watching a
+     zero-height marker element. */
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onScroll, { passive: true });
+  addEventListener("orientationchange", onScroll, { passive: true });
+  apply();
+
+  /* ------------------------------------------- services rail arrows */
+  var cards = document.getElementById("cards");
+  if (cards) {
+    var btns = [].slice.call(document.querySelectorAll("[data-cards]"));
+    var step = function () { var c = cards.querySelector(".card"); return c ? c.offsetWidth + 20 : 320; };
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        cards.scrollBy({ left: step() * Number(b.getAttribute("data-cards")) * 2, behavior: still ? "auto" : "smooth" });
+      });
+    });
+    var sync = function () {
+      var max = cards.scrollWidth - cards.clientWidth - 2;
+      if (btns[0]) btns[0].disabled = cards.scrollLeft <= 2;
+      if (btns[1]) btns[1].disabled = cards.scrollLeft >= max;
+    };
+    cards.addEventListener("scroll", sync, { passive: true });
+    sync();
+  }
+
+  /* ------------------------------------------- review tickers */
+  var R = [
+    ["Mike Sandle", "Kept informed from planning to completion, and impressed with his modern vision. Our Pergola, border sleepers and contemporary Venetian slatted gates and fencing."],
+    ["Sarah New", "A great job remodelling our front driveway. We widened the entrance and reduced a bank at the front. It has transformed the look of the house."],
+    ["James Ward", "Couldn't recommend Ty enough. Re-leveling the whole garden with an original gradient of 10ft. The before and after photos are a testament to his hard work."],
+    ["Claudia Jonkers", "Having used Ashley landscaping for 20 years I can recommend them for friendly and knowledgeable work. Tyler is a great new addition."],
+    ["Chris Knight", "A professional service with well thought out design for our new fencing with gates, patio, pathways and driveway. Hardworking and reliable."],
+    ["Janine Morris", "Removal of hedging, replaced with new. Turf and topsoil out, hardcore and chippings in, edging installed, fenceposts and arris rails."],
+    ["Glenn Burnage", "Always friendly and helpful in suggesting ways to lower the cost, or alternatives to how things can be done. An all round good service."],
+    ["Julie Pick", "An exceptional job on our new raised garden bed. Old beds with decking planks replaced with new sleepers in a brand new design."],
+    ["Scott Phillips", "A fabulous job on our new front gates to our drive. The workmanship was excellent and many of our neighbours have commented on how nice they look."],
+    ["Louise Sutton", "Significant garden tidying in the front garden and a rebuild of the sleeper planter. Knowledgable, professional and good quality work."],
+    ["Janet Keith", "A brilliant job of my paths and patio. All went to plan and the finished area is way better than I thought it would be."],
+    ["John Bellchambers", "Delivered a substantial patio and paving recovery task on schedule and to the quality proposed, despite testing weather conditions."]
+  ];
+  var STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9Z"></path></svg>';
+  var card = function (r) {
+    return '<figure class="quote"><div class="stars" aria-label="Five stars">' + STAR + STAR + STAR + STAR + STAR + '</div>'
+      + '<p>' + r[1] + '</p><footer><b>' + r[0] + '</b>Google review</footer></figure>';
+  };
+  var laneA = document.querySelector('[data-lane="a"]'), laneB = document.querySelector('[data-lane="b"]');
+  if (laneA && laneB) {
+    var a = R.slice(0, 6).map(card).join(""), b = R.slice(6).map(card).join("");
+    laneA.innerHTML = a + a;
+    laneB.innerHTML = b + b;
+  }
+})();
+</script>
+</body>
+</html>

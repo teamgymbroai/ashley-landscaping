@@ -1,0 +1,12 @@
+node_modules
+photos-raw
+photos-enh
+shots
+*.mjs
+page.html
+image-manifest.json
+photo-urls.txt
+*.md
+.claude
+package.json
+package-lock.json

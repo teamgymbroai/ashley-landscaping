@@ -1,0 +1,4 @@
+# Concept build. Not the official Ashley Landscaping site, so it stays out of
+# search: an indexed copy would compete with the real Google Business listing.
+User-agent: *
+Disallow: /
